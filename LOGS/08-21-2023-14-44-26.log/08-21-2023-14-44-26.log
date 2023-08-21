@@ -1,0 +1,6 @@
+[2023-08-21 14:44:28,234 - INFO - preprocess -  >>>> stage Data Preprocessing <<<< started !]
+[2023-08-21 14:44:28,234 - ERROR - preprocess - Datapreprocess.preprocess_data() missing 1 required positional argument: 'data']
+Traceback (most recent call last):
+  File "d:\sleep data work\src\preprocess.py", line 39, in <module>
+    preprocess_data = obj.preprocess_data()
+TypeError: Datapreprocess.preprocess_data() missing 1 required positional argument: 'data'

@@ -1,16 +1,15 @@
-from dataIngestion import data
-from logger import logger
+from loggerr import logger
 from sklearn import preprocessing
 from sklearn.preprocessing import StandardScaler
 from sklearn.pipeline import Pipeline
-
+import pandas as pd
 
 STAGE_NAME  = "Data Preprocessing"
 
 class Datapreprocess:
     def __init__(self) -> None:
         pass
-    def main(self):
+    def preprocess_data(self, data):
         data['Sleep Disorder'].fillna('None', inplace=True)
         data.drop('Person ID', axis=1, inplace=True)
                 #spliting the blood pressure into two columns
@@ -27,17 +26,20 @@ class Datapreprocess:
         data["Sleep Disorder"] = label_encoder.fit_transform(data["Sleep Disorder"])
         
         preprocess_data = data
+        preprocess_data.to_csv("data/preprocess_data.csv")
         
         return preprocess_data
         
 
-    
-try:
-    logger.info(f" >>>> stage {STAGE_NAME} <<<< started !")
-    obj = Datapreprocess()
-    preprocess_data = obj.main()
-    logger.info(f" >>>> stage {STAGE_NAME} <<<< Completed ! \n\n x==================x")
-    
-except Exception as e:
-    logger.exception(e)
-    raise e
+if __name__ == "__main__":
+
+    try:
+        df = pd.read_csv("data/sleep-dataset.csv")
+        logger.info(f" >>>> stage {STAGE_NAME} <<<< started !")
+        obj = Datapreprocess()
+        preprocess_data = obj.preprocess_data(df)
+        logger.info(f" >>>> stage {STAGE_NAME} <<<< Completed ! \n\n x==================x")
+        
+    except Exception as e:
+        logger.exception(e)
+        raise e

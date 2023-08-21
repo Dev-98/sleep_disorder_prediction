@@ -1,0 +1,6 @@
+[2023-08-21 14:43:59,132 - INFO - dataIngestion -  >>>> stage Data Ingestion Stage <<<< started !]
+[2023-08-21 14:43:59,135 - ERROR - dataIngestion - 'DataIngestion' object has no attribute 'main']
+Traceback (most recent call last):
+  File "d:\sleep data work\src\dataIngestion.py", line 20, in <module>
+    data = obj.main()
+AttributeError: 'DataIngestion' object has no attribute 'main'
