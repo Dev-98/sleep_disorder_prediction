@@ -1,0 +1,12 @@
+[2023-08-21 13:59:59,252 - INFO - dataIngestion -  >>>> stage Data Ingestion Stage <<<< started !]
+[2023-08-21 13:59:59,258 - INFO - dataIngestion -  >>>> stage Data Ingestion Stage <<<< Completed ! 
+
+ x==================x]
+[2023-08-21 14:00:00,289 - INFO - preprocess -  >>>> stage Data Preprocessing <<<< started !]
+[2023-08-21 14:00:00,292 - INFO - preprocess -  >>>> stage Data Preprocessing <<<< Completed ! 
+
+ x==================x]
+[2023-08-21 14:00:01,464 - INFO - train -  >>>> stage Training <<<< started !]
+[2023-08-21 14:00:01,491 - INFO - train -  >>>> stage Training <<<< Completed ! 
+
+ x==================x]
