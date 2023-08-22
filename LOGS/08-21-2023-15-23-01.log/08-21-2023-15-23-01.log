@@ -1,8 +1,0 @@
-[2023-08-21 15:23:04,055 - INFO - train -  >>>> stage Training <<<< started !]
-[2023-08-21 15:23:04,078 - ERROR - train - write() argument must be str, not numpy.float64]
-Traceback (most recent call last):
-  File "d:\sleep data work\src\train.py", line 39, in <module>
-    obj3.training(preprocess_path)
-  File "d:\sleep data work\src\train.py", line 29, in training
-    f.write(score)
-TypeError: write() argument must be str, not numpy.float64
