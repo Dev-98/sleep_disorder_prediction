@@ -1,11 +1,11 @@
-FROM python:3.8
+FROM python:3.10-slim
 
-WORKDIR /usr/app
+ENV APP_HOME /app
+WORKDIR $APP_HOME
 
-COPY . .
+COPY . ./
 
 RUN pip install -r requirements.txt
 
-EXPOSE 8501
 
 CMD streamlit run webapp.py
